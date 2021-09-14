@@ -31,8 +31,7 @@ TextButton.Font = Enum.Font.SourceSans
 TextButton.Text = "hitboxes"
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
-TextButton.MouseButton1Down:connect(function()
-	function getnames()
+TextButton.MouseButton1Down:connect(function getnams()
 		for i, v in pairs(game:GetChildren()) do
 			if v.ClassName == "Players" then
 				return v.Name
@@ -52,8 +51,8 @@ TextButton.MouseButton1Down:connect(function()
 									if v.Name ~= LP.Name and v.Character.UpperTorso.Color ~= LP.Character.UpperTorso.Color then
 										v.Character.LowerTorso.CanCollide = false
 										v.Character.LowerTorso.Material = "Neon"
-										v.Character.LowerTorso.Size = Vector3.new(400, 400, 400)
-										v.Character.HumanoidRootPart.Size = Vector3.new(400, 400, )
+										v.Character.LowerTorso.Size = Vector3.new(200, 200, 200)
+										v.Character.HumanoidRootPart.Size = Vector3.new(200, 200, 200)
 									end
 								end
 							end
