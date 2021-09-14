@@ -49,8 +49,8 @@ TextButton.MouseButton1Down:connect(function()
 									if v.Name ~= LP.Name and v.Character.UpperTorso.Color ~= LP.Character.UpperTorso.Color then
 										v.Character.LowerTorso.CanCollide = false
 										v.Character.LowerTorso.Material = "Neon"
-										v.Character.LowerTorso.Size = Vector3.new(200, 200, 200)
-										v.Character.HumanoidRootPart.Size = Vector3.new(200, 200, 200)
+										v.Character.LowerTorso.Size = Vector3.new(400, 400, 400)
+										v.Character.HumanoidRootPart.Size = Vector3.new(400, 400, )
 									end
 								end
 							end
