@@ -11,14 +11,17 @@ local TextLabel_3 = Instance.new("TextLabel")
 --Properties:
 
 arsenal.Name = "arsenal"
-arsenal.Parent = game.Workspace
+arsenal.Parent = game.CoreGui
 arsenal.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+arsenal.ResetOnSpawn = false
 
 Frame.Parent = arsenal
 Frame.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 Frame.BorderColor3 = Color3.fromRGB(60, 60, 60)
 Frame.Position = UDim2.new(0.288249642, 0, 0.158341423, 0)
 Frame.Size = UDim2.new(0, 367, 0, 209)
+Frame.Active = true
+Frame.Draggable = true
 
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
