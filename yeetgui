@@ -1,0 +1,117 @@
+--[[
+dont copy it 
+download and put in scripthub floder
+--]]
+
+game:GetService("StarterGui"):SetCore("SendNotification",{     
+	Title = "CREDITS",     
+	Text = "made by DH sus#2733",
+	Button1 = "cool :sunglasses:",     Duration = 20, })
+
+local lp = game:FindService("Players").LocalPlayer
+
+local function gplr(String)
+	local Found = {}
+	local strl = String:lower()
+	if strl == "all" then
+		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+			table.insert(Found,v)
+		end
+	elseif strl == "others" then
+		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+			if v.Name ~= lp.Name then
+				table.insert(Found,v)
+			end
+		end 
+	elseif strl == "me" then
+		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+			if v.Name == lp.Name then
+				table.insert(Found,v)
+			end
+		end 
+	else
+		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+			if v.Name:lower():sub(1, #String) == String:lower() then
+				table.insert(Found,v)
+			end
+		end 
+	end
+	return Found 
+end
+
+local function notif(str,dur)
+	game:FindService("StarterGui"):SetCore("SendNotification", {
+		Title = "yeet gui",
+		Text = str,
+		Icon = "rbxassetid://2005276185",
+		Duration = dur or 3
+	})
+end
+
+--sus
+
+local feyeet = Instance.new("ScreenGui")
+local Top = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+feyeet.Name = "feyeet"
+feyeet.Parent = game.CoreGui
+feyeet.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+feyeet.ResetOnSpawn = false
+
+Top.Name = "Top"
+Top.Parent = feyeet
+Top.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+Top.Position = UDim2.new(0.392187506, 0, 0.328690797, 0)
+Top.Size = UDim2.new(0, 379, 0, 219)
+Top.Active = true
+Top.Draggable = true
+
+TextBox.Parent = Top
+TextBox.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+TextBox.Position = UDim2.new(0.161390096, 0, 0.204647779, 0)
+TextBox.Size = UDim2.new(0, 255, 0, 87)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "player u want to YEET (cannot be display name)"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 15.000
+
+TextButton.Parent = Top
+TextButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+TextButton.Position = UDim2.new(0.232020915, 0, 0.666653931, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "yeet him :sunglasses:"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 20.000
+TextButton.MouseButton1Click:Connect(function()
+	local Target = gplr(TextBox.Text)
+	if Target[1] then
+		Target = Target[1]
+
+		local Thrust = Instance.new('BodyThrust', lp.Character.HumanoidRootPart)
+		Thrust.Force = Vector3.new(9999,9999,9999)
+		Thrust.Name = "YeetForce"
+		repeat
+			lp.Character.HumanoidRootPart.CFrame = Target.Character.HumanoidRootPart.CFrame
+			Thrust.Location = Target.Character.HumanoidRootPart.Position
+			game:FindService("RunService").Heartbeat:wait()
+		until not Target.Character:FindFirstChild("Head")
+	else
+		notif("Invalid player")
+	end
+end)
+
+TextLabel.Archivable = false
+TextLabel.Parent = Top
+TextLabel.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+TextLabel.Size = UDim2.new(0, 187, 0, 36)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Fe yeet gui made by DH sus#2733"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
