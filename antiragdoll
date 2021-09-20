@@ -1,0 +1,47 @@
+spawn(function()
+    while game:GetService("RunService").Heartbeat:Wait() do
+        local chr = game.Players.LocalPlayer.Character
+
+        for _,v in pairs(chr:GetChildren()) do
+            if v:IsA("BallSocketConstraint") or v:IsA("HingeConstraint") or v.Name == "Controls" or v.Name == "RagdollMe" or v.Name == "State Handler" or v.Name == "FirstPerson" or v.Name == "FakeAdmin" then
+                v:Destroy()
+            end
+        end
+    end
+end)
+
+spawn(function()
+    while game:GetService("RunService").Heartbeat:Wait() do
+        local chr = game.Players.LocalPlayer.Character
+
+        for _,v in pairs(chr:GetChildren()) do
+            if v:IsA("BallSocketConstraint") or v:IsA("HingeConstraint") or v.Name == "Controls" or v.Name == "KillScript" or v.Name == "State Handler" or v.Name == "FirstPerson" or v.Name == "FakeAdmin" then
+                v:Destroy()
+            end
+        end
+    end
+end)
+
+spawn(function()
+    while game:GetService("RunService").Heartbeat:Wait() do
+        local chr = game.Players.LocalPlayer.Character
+
+        for _,v in pairs(chr:GetChildren()) do
+            if v:IsA("BallSocketConstraint") or v:IsA("HingeConstraint") or v.Name == "Controls" or v.Name == "Pushed" or v.Name == "State Handler" or v.Name == "FirstPerson" or v.Name == "FakeAdmin" then
+                v:Destroy()
+            end
+        end
+    end
+end)
+
+spawn(function()
+    while game:GetService("RunService").Heartbeat:Wait() do
+        local chr = game.Players.LocalPlayer.Character
+
+        for _,v in pairs(chr:GetChildren()) do
+            if v:IsA("BallSocketConstraint") or v:IsA("HingeConstraint") or v.Name == "Controls" or v.Name == "StartRagdoll" or v.Name == "State Handler" or v.Name == "FirstPerson" or v.Name == "FakeAdmin" then
+                v:Destroy()
+            end
+        end
+    end
+end)
