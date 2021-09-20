@@ -7,8 +7,10 @@ _G.petname4 = ""
 _G.petname5 = ""
 _G.petname6 = ""
 
-_G.petname1 = "lego game"
-_G.petname2 = "wassup"
+_G.petname1 = "1"
+_G.petname2 = "2"
+_G.petname3 = "3"
+_G.petname4 = "4"
 
 _G.petId1 = ""
 _G.petId2 = ""
