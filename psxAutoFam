@@ -1,0 +1,181 @@
+_G.autofarm = true
+_G.target = nil
+_G.petname1 = ""
+_G.petname2 = ""
+_G.petname3 = ""
+_G.petname4 = ""
+_G.petname5 = ""
+_G.petname6 = ""
+
+_G.petname1 = "lego game"
+_G.petname2 = "wassup"
+
+_G.petId1 = ""
+_G.petId2 = ""
+_G.petId3 = ""
+_G.petId4 = ""
+_G.petId5 = ""
+_G.petId6 = ""
+
+for i,v in pairs(game:GetService("Workspace")["__THINGS"].Pets:GetChildren())do
+   if _G.petname ~= "" and v:FindFirstChild("__BILLBOARD").Nickname.Text == _G.petname then
+          _G.petId1 = v.Name
+             elseif _G.petname2 ~= "" and v:FindFirstChild("__BILLBOARD").Nickname.Text == _G.petname2 then
+                    _G.petId2 = v.Name
+                       elseif _G.petname3 ~= "" and v:FindFirstChild("__BILLBOARD").Nickname.Text == _G.petname3 then
+                              _G.petId3 = v.Name
+                                 elseif _G.petname4 ~= "" and v:FindFirstChild("__BILLBOARD").Nickname.Text == _G.petname4 then
+                                        _G.petId4 = v.Name
+                                           elseif _G.petname5 ~= "" and v:FindFirstChild("__BILLBOARD").Nickname.Text == _G.petname5 then
+                                                  _G.petId5 = v.Name
+                                                     elseif _G.petname6 ~= "" and v:FindFirstChild("__BILLBOARD").Nickname.Text == _G.petname6 then
+                                                            _G.petId6 = v.Name
+                                                               end
+                                                               end
+local function setTarget()
+   local args = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = {
+                                               [1] = _G.petId1
+                                                          }
+                                                                 }
+                                                                    }
+   local args2 = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = {
+                                               [1] = _G.petId2
+                                                          }
+                                                                 }
+                                                                    }
+   local args3 = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = {
+                                               [1] = _G.petId3
+                                                          }
+                                                                 }
+                                                                    }
+   local args4 = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = {
+                                               [1] = _G.petId4
+                                                          }
+                                                                 }
+                                                                    }
+   local args5 = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = {
+                                               [1] = _G.petId5
+                                                          }
+                                                                 }
+                                                                    }
+   local args6 = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = {
+                                               [1] = _G.petId6
+                                                          }
+                                                                 }
+                                                                    }
+   if _G.petId1 ~= "" then
+          workspace.__THINGS.__REMOTES["join coin"]:InvokeServer(unpack(args))
+             elseif _G.petId2 ~= "" then
+                    workspace.__THINGS.__REMOTES["join coin"]:InvokeServer(unpack(args2))
+                       elseif _G.petId3 ~= "" then
+                              workspace.__THINGS.__REMOTES["join coin"]:InvokeServer(unpack(args3))
+                                 elseif _G.petId4 ~= "" then
+                                        workspace.__THINGS.__REMOTES["join coin"]:InvokeServer(unpack(args4))
+                                           elseif _G.petid5 ~= "" then
+                                                  workspace.__THINGS.__REMOTES["join coin"]:InvokeServer(unpack(args5))
+                                                     elseif _G.petId6 ~= "" then
+                                                            workspace.__THINGS.__REMOTES["join coin"]:InvokeServer(unpack(args6))
+                                                               end
+end
+
+local function farmTarget()
+   local args = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = _G.petId1
+                                       }
+                                          }
+   local args2 = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = _G.petId2
+                                       }
+                                          }
+   local args3 = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = _G.petId3
+                                       }
+                                          }
+   local args4 = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = _G.petId4
+                                       }
+                                          }
+   local args5 = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = _G.petId5
+                                       }
+                                          }
+   local args6 = {
+          [1] = {
+                     [1] = _G.target,
+                                [2] = _G.petId6
+                                       }
+                                          }
+   if _G.petId1 ~= "" then
+          workspace.__THINGS.__REMOTES["farm coin"]:FireServer(unpack(args))
+             elseif _G.petId2 ~= "" then
+                    workspace.__THINGS.__REMOTES["farm coin"]:FireServer(unpack(args2))
+                       elseif _G.petId3 ~= "" then
+                              workspace.__THINGS.__REMOTES["farm coin"]:FireServer(unpack(args3))
+                                 elseif _G.petId4 ~= "" then
+                                        workspace.__THINGS.__REMOTES["farm coin"]:FireServer(unpack(args4))
+                                           elseif _G.petid5 ~= "" then
+                                                  workspace.__THINGS.__REMOTES["farm coin"]:FireServer(unpack(args5))
+                                                     elseif _G.petId6 ~= "" then
+                                                            workspace.__THINGS.__REMOTES["farm coin"]:FireServer(unpack(args6))
+                                                               end
+                                                               end
+
+local function getTarget()
+   _G.target = ""
+      _G.distance = math.huge
+         _G.magnitude = ""
+   for i,v in pairs(game:GetService("Workspace")["__THINGS"].Coins:GetChildren())do
+          if _G.autofarm then
+                         _G.magnitude = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v:FindFirstChild("POS").Position).Magnitude
+                                        if _G.magnitude <= _G.distance then
+                                                           _G.distance = _G.magnitude
+                                                                              _G.target = v.Name
+                                                                                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v:FindFirstChild("POS").Position)
+                                                                                                                    setTarget()
+                                                                                                                                       farmTarget()
+                                                                                                                                                      end
+                                                                                                                                                                 end
+                                                                                                                                                                        end
+                                                                                                                                                                           return _G.target
+                                                                                                                                                                           end
+game:GetService("Workspace")["__THINGS"].Coins.ChildRemoved:Connect(function(item)
+   if item.Name == _G.target then
+          wait(1)
+                 getTarget()
+                    end
+                    end)
+getTarget()
+
+game.Players.LocalPlayer.Character.LeftLowerLeg.Touched:Connect(function(hit)
+   if hit == game:GetService("Workspace")["__MAP"].Areas.VIP.Ground then
+          getTarget()
+             end
+             end)
