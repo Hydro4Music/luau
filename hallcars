@@ -1,0 +1,61 @@
+-- made by !Hex$U$#1231
+local args = {
+    [1] = "UnlockEazy"
+}
+game:GetService("ReplicatedStorage").RemoteEvents.H5alloweenRemote:FireServer(unpack(args))
+
+local args = {
+    [1] = "UnlockMedium"
+}
+game:GetService("ReplicatedStorage").RemoteEvents.H5alloweenRemote:FireServer(unpack(args))
+
+local args = {
+    [1] = "UnlockExtreme"
+}
+game:GetService("ReplicatedStorage").RemoteEvents.H5alloweenRemote:FireServer(unpack(args))
+
+local args = {
+    [1] = "UnlockHard"
+}
+game:GetService("ReplicatedStorage").RemoteEvents.H5alloweenRemote:FireServer(unpack(args))
+
+local args = {
+    [1] = "UnlockInsane"
+}
+game:GetService("ReplicatedStorage").RemoteEvents.H5alloweenRemote:FireServer(unpack(args))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+local args = {
+    [1] = "made by !Hex$U$, sub to DH sussy",
+    [2] = "All"
+}
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
